@@ -21,7 +21,7 @@ module.exports = {
     const { id } = req.params;
     
     try{
-      const user = await User.findByIdAndRemove(id);
+      await User.findByIdAndRemove(id);
 
       return res.json({ message: 'User removed sucessfully.' });
 
